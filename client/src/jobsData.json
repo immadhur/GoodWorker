@@ -1,0 +1,58 @@
+[
+  {
+    "id": "aa274e93-f888-4180-899a-4c13de6dd637",
+    "type": "Full Time",
+    "company": "Agiloft, Inc.",
+    "location": "India, Hungary, Russia, Philippines, Czech Republic",
+    "title": "DevOps Engineer (Remote)"
+  },
+  {
+    "id": "c2beb2b6-9190-4ca7-b0ca-7804b768dc87",
+    "type": "Full Time",
+    "company": "Shell Business operations, Chennai",
+    "location": "Chennai",
+    "title": "Associate Data Scientist"
+  },
+  {
+    "id": "2315d8ae-9e9b-4b73-a98e-8c383cdf532e",
+    "type": "Full Time",
+    "company": "Shell Business operations, Chennai",
+    "location": "Chennai",
+    "title": "Data Scientist - Retail"
+  },
+  {
+    "id": "3fc15bd7-3217-4526-a805-2a48364c5a11",
+    "type": "Full Time",
+    "company": "Shell Business operations, Bangalore",
+    "location": "Bangalore",
+    "title": "Full Stack Engineer"
+  },
+  {
+    "id": "03f76ce2-213b-43aa-8127-7e6885a08a28",
+    "type": "Full Time",
+    "company": "Shell Business operations, Bangalore",
+    "location": "Bangalore",
+    "title": "Machine Learning Engineer"
+  },
+  {
+    "id": "9cc73009-b73d-4ed0-a6b3-7da236236464",
+    "type": "Full Time",
+    "company": "Shell Business operations, Chennai",
+    "location": "Chennai",
+    "title": "Data Science Team Lead"
+  },
+  {
+    "id": "e0714497-d1b7-4411-b6b6-39cf49bc3a24",
+    "type": "Full Time",
+    "company": "Shell Business operations, Bangalore",
+    "location": "Bangalore",
+    "title": "Sr. Machine Learning Engineer"
+  },
+  {
+    "id": "6c5e30ab-4485-4505-8693-8056bacefb47",
+    "type": "Full Time",
+    "company": "Shell India Markets Pvt. Ltd.",
+    "location": "Bangalore",
+    "title": "HPC & AI Resident"
+  }
+]

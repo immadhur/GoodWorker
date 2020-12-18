@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar{
+  width: 100%;
+  padding: 1px;
+  background: rgb(105, 196, 105);
+  text-align: left;
+  padding-left: 30px;
+  color: rgb(15, 15, 58);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar p{
+  cursor: pointer;
+  height: 70px;
+  margin: 0px 20px;
+  padding-top: 20px;
+}
+
+.navbar div{
+  display: flex;
+}
+
+.navbar p:hover{
+  border-bottom: 2px solid white;
+}
+
+.navbar h1{
+  cursor: pointer;
+}
+
+.job-container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px gray;
+  margin: 30px 60px;
+  cursor: pointer;
+  background: linear-gradient(45deg, white, rgb(227, 241, 228));
+}
+
+.job-container:hover{
+  background: none;
+  box-shadow: 1px 1px 50px gray;
+}
+
+.job-container h3{
+  color: rgb(28, 28, 92);
+}
+
+.job-right{
+  text-align: right;
+  align-self: center;
+}
+
+.job-left{
+  text-align: left;
+}
+
+.verification-label{
+  background: rgb(105, 196, 105);
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  padding: 2px;
+  margin: 0px;
+}
+
+.job-details{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.apply-button{
+  width: 300px;
+  background: rgb(15, 15, 58);
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  margin: 0px 350px;
+  cursor: pointer;
+}
+
+
+.apply-button:hover{
+  background: rgb(46, 46, 136);
+  box-shadow: 2px 2px 10px grey;
+}
+
+.apply-button:disabled{
+  background: grey;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.style-info-msg{
+  background: rgb(244, 249, 253);
+  border: 1px solid rgb(94, 169, 231);
+  border-left: 6px solid rgb(94, 169, 231);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0px 20px 0px;
+}
+
+.style-info-msg-error{
+  background: rgb(253, 244, 244);
+  border: 1px solid rgb(255, 0, 13);
+  border-left: 6px solid rgb(230, 19, 19);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0px 20px 0px;
+}
+
+.info-msg{
+  width: 100%;
+  text-align: center;
+}
+
+.create-account-form-container{
+  width: 70%;
+  text-align: left;
+  margin: 50px auto;
+}
+
+.experience-block{
+  display: flex;
+  justify-content: space-between;
+}
+
+.disable-layer{
+  z-index: 100;
+  height: 500px;
+  width: 70%;
+  opacity: 0.1;
+  position: absolute;
+  background: grey;
+}
+
+.register-from-login{
+  color: blue;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.container-disabled{
+  z-index: 100;
+  opacity: 0.5;
+  background: grey;
+  cursor: not-allowed;
+}
+
+.container-disabled:hover{
+  box-shadow: 3px 3px 10px gray;
+  background: grey;
+}
