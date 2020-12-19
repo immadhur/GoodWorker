@@ -1,8 +1,8 @@
 ## GoodWorker
 
 - GoodWorker is a web portal for job companies to find verified candidates and for seekers to find jobs.
-- A candidate can create a account describing his averall experience.
-- On Signup page he can add his experience and offer letters get a GW verified label.
+- A candidate can create a account describing his overall experience.
+- On Signup page candidate can add his experience and offer letters get a GW verified label.
 - Employers has the option to mark GW verified only so only verified candidates can apply.
 - A non GW verified candidate can only apply for jobs with does not require GW verification.
 - Applied jobs can be viewed on Applied jobs page.
@@ -35,7 +35,7 @@ JWT_KEY=<value>
 - Functional components are used along with react hooks
 - Redux is used for state management.
 
-## Other 3ed party dependencies
+## Other 3rd party dependencies
 Frontend -
 - axios, react-bootstrap, react-datepicker, validator
 
