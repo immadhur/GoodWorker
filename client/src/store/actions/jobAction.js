@@ -14,7 +14,6 @@ export const updateJobsList = () => async dispatch => {
       payload: true
     });
     const res = await axios.get('/jobs');
-    console.log({ res });
     dispatch({
       type: UPDATE_JOBS_LIST,
       payload: res.data.body
@@ -71,7 +70,6 @@ export const getAppliedJobs = () => async dispatch => {
       payload: true
     });
     const res = await axios.get('/applied');
-    console.log({ res });
     dispatch({
       type: SET_APPLIED_JOBS,
       payload: res.data.body.jobs

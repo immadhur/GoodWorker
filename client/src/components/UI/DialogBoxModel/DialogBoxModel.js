@@ -3,7 +3,6 @@ import style from './DialogBoxModel.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 
 const DialogBox = ({ show, close, children }) => {
-    console.log('RENDer:::');
     return (
         <>
             <Backdrop click={close} isVisible={show} />

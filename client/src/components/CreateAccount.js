@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button, Spinner } from 'react-bootstrap';
 import ExperienceForm from './ExperienceForm';
 import { connect } from 'react-redux';
-import { authenticateUser } from '../store/actions/userAction';
+import { authenticateUser, setError } from '../store/actions/userAction';
 import { useHistory } from 'react-router-dom';
 import isEmail from 'validator/es/lib/isEmail';
 
-const CreateAccount = ({ authenticateUser, loading, isAuthenticated, error }) => {
+const CreateAccount = ({ authenticateUser, loading, isAuthenticated, error, setError }) => {
 
   const [experienceCount, setExperienceCount] = useState(0);
   const [isAddEnabled, setAddEnabled] = useState(true);
@@ -14,7 +14,7 @@ const CreateAccount = ({ authenticateUser, loading, isAuthenticated, error }) =>
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [experienceData, setExperienceData] = useState([]);
-  const [isGWVerified, setGWVerified] = useState(false);
+  const [isGWVerified, setGWVerified] = useState(true);
   const [isInputValid, setIsInputValid] = useState('');
 
   const history = useHistory();
@@ -25,14 +25,13 @@ const CreateAccount = ({ authenticateUser, loading, isAuthenticated, error }) =>
   }, [email, password, name, isAddEnabled]);
 
   useEffect(() => {
+    setError('');
+  }, []);
+
+  useEffect(() => {
     if (isAuthenticated)
       history.push('/');
   }, [isAuthenticated]);
-
-  useEffect(() => {
-    if (error)
-      alert(error);
-  }, [error]);
 
   const addExperienceHandler = () => {
     setExperienceCount(c => c + 1);
@@ -70,7 +69,8 @@ const CreateAccount = ({ authenticateUser, loading, isAuthenticated, error }) =>
 
   const submitButtonHandler = async (e) => {
     e.preventDefault();
-    authenticateUser({ name, email, password, experienceData, isGWVerified }, true);
+    const isVerified = experienceData.length === 0 ? false : isGWVerified;
+    authenticateUser({ name, email, password, experienceData, isGWVerified: isVerified }, true);
   };
 
   function loadExperienceView () {
@@ -139,5 +139,6 @@ const mapStateToProps = ({ loading, isAuthenticated, error }) => {
   };
 };
 export default connect(mapStateToProps, {
-  authenticateUser
+  authenticateUser,
+  setError
 })(CreateAccount);

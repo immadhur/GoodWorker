@@ -10,9 +10,7 @@ router.post('/signup', async (req, res)=>{
     try {
         if(!req.body)
             throw new Error();
-        const user=new model(req.body);
-        console.log('REQ::', req.body);
-        console.log('user::', user);
+        const user = new model(req.body);
         const token=await user.GenerateToken();
         await user.save();
         res.status(201)
@@ -40,7 +38,6 @@ router.get('/logout', auth, async (req, res) => {
         req.user.tokens = req.user.tokens.filter((token) => {
             return token.token !== req.token;
         })
-        console.log(req.user.tokens);
         await req.user.save();
         res.send(successRes('User logged out!'));
     } catch (error) {

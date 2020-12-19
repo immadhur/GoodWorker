@@ -62,7 +62,6 @@ const userSchema = mongoose.Schema({
 userSchema.pre('save', async function(next){
     const user=this;
     try {
-        console.log({user});
         if(user.isModified('password'))
             user.password=await bcrypt.hash(user.password, 8);
         next();
@@ -89,8 +88,7 @@ userSchema.methods.GetUser=function(){
     const user=this.toObject();
     delete user.password;
     delete user.tokens;
-    user.expiresIn=3600;
-    console.log(user);
+    user.expiresIn = 3600;
     return user;
 }
 

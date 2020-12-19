@@ -26,6 +26,13 @@ export const authenticateUser = (data, isSignup) => async dispatch => {
   }
 };
 
+export function setError (error) {
+  return {
+    type: ERROR,
+    payload: error
+  };
+}
+
 export function setAuthentication (isAuth) {
   return {
     type: SET_AUTHENTICATION,

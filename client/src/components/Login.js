@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 import { connect } from 'react-redux';
-import { authenticateUser } from '../store/actions/userAction';
+import { authenticateUser, setError } from '../store/actions/userAction';
 import isEmail from 'validator/es/lib/isEmail';
 import Spinner from './UI/Spinner/Spinner';
 
-const Login = ({ authenticateUser, isAuthenticated, loading, error }) => {
+const Login = ({ authenticateUser, isAuthenticated, loading, error, setError }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,9 +24,8 @@ const Login = ({ authenticateUser, isAuthenticated, loading, error }) => {
   }, [isAuthenticated]);
 
   useEffect(() => {
-    if (error)
-      alert(error);
-  }, [error]);
+    setError('');
+  }, []);
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -79,5 +78,6 @@ const mapStateToProps = ({ loading, isAuthenticated, error }) => {
   };
 };
 export default connect(mapStateToProps, {
-  authenticateUser
+  authenticateUser,
+  setError
 })(Login);
